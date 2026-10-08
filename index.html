@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AD.Shop</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+   <header class="parie1">
+      <nav class="navbar">
+        <div class="burger" id="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="logo-be"><img src="./picture/logo 2.png" alt="" /></div>
+
+        <ul class="nav-links">
+          <li><a href="index.html">Acceuil</a></li>
+          <li><a href="produit.html">Nos Produit</a></li>
+          <li><a href="panier.html">Panier <i class="fa-solid fa-cart-shopping"></i><span class="cart-counter">0</span></a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="online-users">
+    <span class="status-dot"></span>
+    <span id="visitor-count">0</span>
+    <span class="online-text">en ligne</span>
+       </div>
+
+        <div class="nav-search">
+  <!-- Barre qui s'ouvre au clic (desktop) -->
+  <div class="nav-search-box" id="nav-search-box">
+    <input
+      type="text"
+      id="nav-search-input"
+      placeholder="Rechercher un produit..."
+    />
+    <button onclick="lancerRecherche()">
+      <i class="fa-solid fa-arrow-right"></i>
+    </button>
+  </div>
+  <!-- Icône loupe -->
+  <button class="nav-search-icon" onclick="toggleSearch()">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+</div>
+      </nav>
+
+      <div class="dropdown-menu" id="dropdown-menu">
+        <ul>
+          <li><a href="index.html">Acceuil</a></li>
+          <li><a href="produit.html">Nos Produit</a></li>
+          <li><a href="panier.html">Le Panier <i class="fa-solid fa-cart-shopping"></i><span class="cart-counter">0</span></a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <section class="hero2">
+        <div class="slides">
+          <div class="slide active" style="background-image:url(./picture/J.Morant.png)"></div>
+          <div class="slide" style="background-image:url(./picture/F.parfum.png)"></div>
+          <div class="slide" style="background-image:url(./picture/Sauvage.png)"></div>
+          <div class="slide" style="background-image:url(./picture/V.femme.png)"></div>
+        </div>
+        <div class="shade"></div>
+        <div class="hero2-in">
+          <div>
+            <span class="hero-tag">🔥 Nouveautés chaque semaine</span>
+            <h1>Craque pour <span class="typed" id="typed"></span></h1>
+            <p>Des produits de qualité, livrés partout aux Comores. Commande aujourd'hui, reçois vite, et gagne peut-être un cadeau surprise !</p>
+            <div class="hero-btns">
+              <a class="btn btn-red" href="produit.html">Voir les produits</a>
+              <a class="btn btn-white" href="contact.html">Nous contacter</a>
+            </div>
+            <div class="giftmsg" id="giftmsg">🎉 Surprise ! Plus tu commandes, plus tu gagnes : cadeaux selon la quantité et bonus pour les clients fidèles.</div>
+          </div>
+          <div class="circ">
+            <div class="circ-img">
+              <div class="cimg active" style="background-image:url(./picture/chaine.webp)"></div>
+              <div class="cimg" style="background-image:url(./picture/montre.avif)"></div>
+              <div class="cimg" style="background-image:url(./picture/img10.jpg)"></div>
+            </div>
+            <button class="gift" id="gift" aria-label="Cadeau surprise">🎁</button>
+            <span class="gift-hint">Clique-moi !</span>
+          </div>
+        </div>
+        <div class="dots" id="dots"></div>
+      </section>
+
+      <div class="marquee"><div class="marquee-track"><span>🚛 Livraison partout aux Comores</span><span>⭐ Produits de qualité</span><span>📱 Paiement Mvola</span><span>🎁 Cadeaux pour les fidèles</span><span>🚛 Livraison partout aux Comores</span><span>⭐ Produits de qualité</span><span>📱 Paiement Mvola</span><span>🎁 Cadeaux pour les fidèles</span></div></div>
+
+      <section class="gallery has-deco">
+        <div class="deco">
+          <span class="bub b-arch" style="--s:100px;--t:9%;--l:4%;--fx:220px"><i style="background-image:url(./picture/chaussure.jpg)"></i></span>
+          <span class="bub b-blob" style="--s:110px;--t:7%;--r:4%;--fx:-220px;--dl:.15s"><i style="background-image:url(./picture/montre.avif)"></i></span>
+        </div>
+        <div class="reveal">
+        <span class="hero-tag">📸 La galerie</span>
+        <h2>Tout ça t'attend <span>chez AD.Shop</span></h2>
+        <p>Chaque photo est un vrai produit qui peut arriver chez toi, partout aux Comores. Touches-en une, on s'occupe du reste !</p>
+        </div>
+        <div class="rows reveal">
+        <div class="row">
+          <div class="photo-track">
+            <a class="ph" href="produit.html"><img src="./picture/chaussure.jpg" alt="Produit AD.Shop" draggable="false"><span>Ne le laisse pas filer 🔥</span></a>
+            <a class="ph" href="produit.html"><img src="./picture/img10.jpg" alt="Produit AD.Shop" draggable="false"><span>Tu vas l'adorer 💙</span></a>
+            <a class="ph" href="produit.html"><img src="./picture/sucreries.jpg" alt="Produit AD.Shop" draggable="false"><span>Fais-toi plaisir 🎁</span></a>
+            <a class="ph" href="produit.html"><img src="./picture/chaine.webp" alt="Produit AD.Shop" draggable="false"><span>Viens le découvrir ✨</span></a>
+            <a class="ph" href="produit.html"><img src="./picture/montre.avif" alt="Produit AD.Shop" draggable="false"><span>Craque pour lui 😍</span></a>
+            <a class="ph" href="produit.html"><img src="./picture/gant.webp" alt="Produit AD.Shop" draggable="false"><span>Il t'attend 👀</span></a>
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="photo-track rev">
+            <a class="ph" href="produit.html"><img src="./picture/chaussure.jpg" alt="Produit AD.Shop" draggable="false"><span>Ne le laisse pas filer 🔥</span></a>
+            <a class="ph" href="produit.html"><img src="./picture/img10.jpg" alt="Produit AD.Shop" draggable="false"><span>Tu vas l'adorer 💙</span></a>
+            <a class="ph" href="produit.html"><img src="./picture/sucreries.jpg" alt="Produit AD.Shop" draggable="false"><span>Fais-toi plaisir 🎁</span></a>
+            <a class="ph" href="produit.html"><img src="./picture/chaine.webp" alt="Produit AD.Shop" draggable="false"><span>Viens le découvrir ✨</span></a>
+            <a class="ph" href="produit.html"><img src="./picture/montre.avif" alt="Produit AD.Shop" draggable="false"><span>Craque pour lui 😍</span></a>
+            <a class="ph" href="produit.html"><img src="./picture/gant.webp" alt="Produit AD.Shop" draggable="false"><span>Il t'attend 👀</span></a>
+          </div>
+        </div>
+        </div>
+        <div class="reveal"><a class="btn btn-red" href="produit.html">Tout voir</a></div>
+      </section>
+
+      <section class="picks has-deco">
+        <div class="deco">
+          <span class="bub b-circle" style="--s:170px;--t:9%;--l:3%;--fx:220px"><i style="background-image:url(./picture/img10.jpg)"></i></span>
+          <span class="bub b-arch" style="--s:130px;--t:62%;--l:7%;--fx:220px;--dl:.2s"><i style="background-image:url(./picture/chaine.webp)"></i></span>
+          <span class="bub b-sq" style="--s:150px;--t:8%;--r:3%;--fx:-220px;--dl:.1s"><i style="background-image:url(./picture/sucreries.jpg)"></i></span>
+          <span class="bub b-blob" style="--s:160px;--t:58%;--r:6%;--fx:-220px;--dl:.3s"><i style="background-image:url(./picture/chaussure.jpg)"></i></span>
+        </div>
+        <div class="reveal">
+        <span class="hero-tag">✨ Nos coups de cœur</span>
+        <h2>Touché, <span>Ça brille !</span></h2>
+        <p>Passez votre souris (ou votre doigt) sur une carte et regardez-la s'incliner.</p>
+        </div>
+        <div class="picks-grid">
+          <a class="holo reveal" href="Products/chaussures.html">
+            <img src="./picture/chaussure.jpg" alt="Chaussures" draggable="false">
+            <div class="holo-info"><span class="holo-tag">★ Coup de cœur</span><h3>Chaussures</h3><em>Découvrir <i class="fa-solid fa-arrow-right"></i></em></div>
+            <div class="holo-shine"></div>
+          </a>
+          <a class="holo reveal" href="produit.html">
+            <img src="./picture/montre.avif" alt="Montres" draggable="false">
+            <div class="holo-info"><span class="holo-tag">★ Coup de cœur</span><h3>Montres</h3><em>Découvrir <i class="fa-solid fa-arrow-right"></i></em></div>
+            <div class="holo-shine"></div>
+          </a>
+          <a class="holo reveal" href="produit.html">
+            <img src="./picture/chaine.webp" alt="Chaînes" draggable="false">
+            <div class="holo-info"><span class="holo-tag">★ Coup de cœur</span><h3>Chaînes</h3><em>Découvrir <i class="fa-solid fa-arrow-right"></i></em></div>
+            <div class="holo-shine"></div>
+          </a>
+          <a class="holo reveal" href="produit.html">
+            <img src="./picture/sucreries.jpg" alt="Sucreries" draggable="false">
+            <div class="holo-info"><span class="holo-tag">★ Coup de cœur</span><h3>Sucreries</h3><em>Découvrir <i class="fa-solid fa-arrow-right"></i></em></div>
+            <div class="holo-shine"></div>
+          </a>
+        </div>
+      </section>
+
+      <section class="final has-deco" id="final">
+        <div class="fl f1" data-d="40"><img src="./picture/chaussure.jpg" alt="" draggable="false"></div>
+        <div class="fl f2" data-d="70"><img src="./picture/montre.avif" alt="" draggable="false"></div>
+        <div class="fl f3" data-d="90"><img src="./picture/chaine.webp" alt="" draggable="false"></div>
+        <div class="fl f4" data-d="50"><img src="./picture/sucreries.jpg" alt="" draggable="false"></div>
+        <div class="final-in reveal">
+          <span class="hero-tag">💬 Une demande spéciale ?</span>
+          <h2>Tu ne trouves pas ton produit ? <span>On le trouve pour toi !</span></h2>
+          <p>Envoie-nous une photo de ce que tu cherches : on le commande pour toi et on te livre partout aux Comores.</p>
+          <div class="steps"><span>📸 Tu envoies la photo</span><span>🛒 Sur commande</span><span>🚛 Tu es livré</span></div>
+          <div class="hero-btns">
+            <a class="btn btn-red pulse" href="contact.html">Envoyer ma demande</a>
+            <a class="btn btn-white" href="produit.html">Voir les produits</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="terminus">
+      <div class="ter1">
+        <h3>On Vous Presente</h3>
+        <img src="./picture/logo 2.png" alt="" />
+        <p>Des produits de bonne qualité</p>
+        <p>et des livraisons trés rapides</p>
+        <div class="livre"><p>🚛: Livraison partout aux comores</p></div>
+      </div>
+      <div class="ter2">
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="index.html">Acceuil</a></li>
+          <li><a href="produit.html">Nos Produit</a></li>
+          <li><a href="panier.html">Le Panier <i class="fa-solid fa-cart-shopping"></i><span class="cart-counter">0</span></a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div>📞: 034 20 707 87</div>
+      </div>
+      <div class="ter3">
+        <h3>Nous contacter rapidement</h3>
+        <p>whatsapp:+261 034 20 707 87</p>
+        <p>whatsapp busness:+261 037 89 307 10</p>
+        <p>whatsapp manager :+269 473 24 50</p>
+        <P>facebook: Adjmal Dhinnoune</p>
+          <div class="mail">drimsofficiel7@gmail.com</div>
+      </div>
+      <div class="ter4">
+        <h3>Vous pouvez</h3>
+        <p>-Commander se qu'on ne vend pas.</p>
+        <p>-Envoyer des photos de produit.</p>
+        <p>-Avoir des Bonus si vous etes fidéle a nous.</p>
+        <p>-Avoir des Cadeaux selon la quantité de </p>
+        <p>produit Commandé.</p>
+        <div class="boom"><a href="produit.html">Commander</a></div>
+      </div>
+    </footer>
+     <nav class="bottom-nav">
+  <a href="index.html" class="bottom-nav-item" id="bn-accueil">
+    <div class="bn-icon-wrap">
+      <i class="fa-solid fa-house"></i>
+    </div>
+    <span class="bn-label">Accueil</span>
+  </a>
+
+  <a href="produit.html" class="bottom-nav-item" id="bn-produit">
+    <div class="bn-icon-wrap">
+      <i class="fa-solid fa-shirt"></i>
+    </div>
+    <span class="bn-label">Produits</span>
+  </a>
+
+  <a href="panier.html" class="bottom-nav-item" id="bn-panier">
+    <div class="bn-icon-wrap">
+      <i class="fa-solid fa-cart-shopping"></i>
+      <span class="bn-badge" id="bn-cart-count" style="display:none">0</span>
+    </div>
+    <span class="bn-label">Panier</span>
+  </a>
+
+  <a href="contact.html" class="bottom-nav-item" id="bn-contact">
+    <div class="bn-icon-wrap">
+      <i class="fa-solid fa-envelope"></i>
+    </div>
+    <span class="bn-label">Contact</span>
+  </a>
+</nav>
+
+<div class="bn-spacer"></div>
+    <script src="index.js"></script>
+    <script type="module" src="visitors.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1213 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chaussures — AD Shop</title>
+    <link rel="stylesheet" href="chaussures.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../produit.css" />
+  </head>
+  <body>
+    <header class="parie1">
+      <nav class="navbar">
+        <div class="burger" id="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="logo-be"><img src="../picture/logo 2.png" alt="" /></div>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="../index.html">Acceuil</a></li>
+          <li><a href="../produit.html">Nos Produit</a></li>
+          <li>
+            <a href="../panier.html"
+              >Panier <i class="fa-solid fa-cart-shopping"></i
+              ><span class="cart-counter">0</span
+            ></a>
+          </li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-search" id="nav-search">
+          <!-- Barre qui s'ouvre au clic (desktop) -->
+          <div class="nav-search-box" id="nav-search-box">
+            <input
+              type="text"
+              id="nav-search-input"
+              placeholder="Rechercher un produit..."
+            />
+            <button onclick="lancerRecherche()">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+          <!-- Icône loupe -->
+          <button
+            class="nav-search-icon"
+            id="nav-search-icon"
+            onclick="toggleSearch()"
+          >
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+      </nav>
+
+      <div class="dropdown-menu" id="dropdown-menu">
+        <ul>
+          <li><a href="../index.html">Acceuil</a></li>
+          <li><a href="../produit.html">Nos Produit</a></li>
+          <li>
+            <a href="../panier.html"
+              >Le Panier <i class="fa-solid fa-cart-shopping"></i
+              ><span class="cart-counter">0</span
+            ></a>
+          </li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+    <div class="search-bar-wrap">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input
+        type="text"
+        placeholder="Rechercher une chaussure..."
+        oninput="filtrerProduits(this.value)"
+      />
+    </div>
+    <main>
+      <div class="tout">
+        <div class="poid1">
+          <img src="../picture/chaussure.jpg" alt="" />
+          <a href="./chaussures.html">Chaussure</a>
+        </div>
+        <div class="poid1">
+          <img src="../picture/t-shirt.webp" alt="" />
+          <a href="">T-shirt</a>
+        </div>
+        <div class="poid1">
+          <img src="../picture/pull.jpeg" alt="" />
+          <a href="">Pull_capuche</a>
+        </div>
+        <div class="poid1">
+          <img src="../picture/parfum.webp" alt="" />
+          <a href="">Parfum</a>
+        </div>
+        <div class="poid1">
+          <img src="../picture/montre.avif" alt="" />
+          <a href="">Montre</a>
+        </div>
+        <div class="poid1">
+          <img src="../picture/lunette.jpg" alt="" />
+          <a href="">Lunette</a>
+        </div>
+        <div class="poid1">
+          <img src="../picture/telephone.jpg" alt="" />
+          <a href="">Telephone</a>
+        </div>
+        <div class="poid1">
+          <img src="../picture/sacoche.avif" alt="" />
+          <a href="">Sacoche</a>
+        </div>
+        <div class="poid1">
+          <img src="../picture/sac.webp" alt="" />
+          <a href="">Sac</a>
+        </div>
+        <div class="poid1">
+          <img src="../picture/img6.jpg" alt="" />
+          <a href="">Bonnet</a>
+        </div>
+        <div class="poid1">
+          <img src="../picture/robe.jpg" alt="" />
+          <a href="">Robe</a>
+        </div>
+        <div class="poid1">
+          <img src="../picture/chaine.webp" alt="" />
+          <a href="">Chaine&Bracelet</a>
+        </div>
+        <div class="poid1">
+          <img src="../picture/skala.jpeg" alt="" />
+          <a href="">Produit-cheveux</a>
+        </div>
+        <div class="poid1">
+          <img src="../picture/bijoux.webp" alt="" />
+          <a href="">Bijoux</a>
+        </div>
+        <div class="poid1">
+          <img src="../picture/technologie.jpg" alt="" />
+          <a href="">Technologies</a>
+        </div>
+        <div class="poid1">
+          <img src="../picture/casquette.webp" alt="" />
+          <a href="">Casquette</a>
+        </div>
+        <div class="poid1">
+          <img src="../picture/ballon.webp" alt="" />
+          <a href="">Ballon</a>
+        </div>
+        <div class="poid1">
+          <img src="../picture/maillot.png" alt="" />
+          <a href="">Maillot</a>
+        </div>
+        <div class="poid1">
+          <img src="../picture/gant.webp" alt="" />
+          <a href="">Gants</a>
+        </div>
+        <div class="poid1">
+          <img src="../picture/chicha.jpg" alt="" />
+          <a href="">Puff & chicha</a>
+        </div>
+        <div class="poid1">
+          <img src="../picture/led.webp" alt="" />
+          <a href="">Led</a>
+        </div>
+        <div class="poid1">
+          <img src="../picture/huile.jpg" alt="" />
+          <a href="">Huile</a>
+        </div>
+        <div class="poid1">
+          <img src="../picture/sucreries.jpg" alt="" />
+          <a href="">Sucreries</a>
+        </div>
+      </div>
+    </main>
+
+    <!-- GRILLE -->
+    <div class="products-wrapper" id="productsWrapper">
+      <!-- ===== NIKE (8) ===== -->
+      <div class="one2" data-cat="nike">
+        <img src="../picture/sacoche.avif" alt="" />
+        <div class="one2-info">
+          <h2 class="one2-titre">Nike Air Max 270</h2>
+          <div class="one2-selects">
+            <select class="select-style">
+              <option value="">Couleur</option>
+              <option>⬛ Noir</option>
+              <option>⬜ Blanc</option>
+              <option>🟥 Rouge</option>
+              <option>🟦 Bleu</option>
+            </select>
+            <select class="select-style">
+              <option value="">Pts</option>
+              <option>40</option>
+              <option>41</option>
+              <option>42</option>
+              <option>43</option>
+              <option>44</option>
+              <option>45</option>
+            </select>
+          </div>
+          <h2 class="one2-prix">25000 Fc / 50€</h2>
+          <a href="#" class="one2-btn" onclick="showToast(event)">Acheter</a>
+        </div>
+      </div>
+
+      <div class="one2" data-cat="nike">
+        <img
+          src="../picture/robe.jpg"
+          alt="Air Force 1"
+          onerror="
+            this.src = 'https://placehold.co/200x170/eaeaf9/1a6fc4?text=AD+Shop'
+          "
+        />
+        <div class="one2-info">
+          <h2 class="one2-titre">Nike Air Force 1</h2>
+          <div class="one2-selects">
+            <select class="select-style">
+              <option value="">Couleur</option>
+              <option>⬛ Noir</option>
+              <option>⬜ Blanc</option>
+              <option>🟥 Rouge</option>
+            </select>
+            <select class="select-style">
+              <option value="">Pts</option>
+              <option>40</option>
+              <option>41</option>
+              <option>42</option>
+              <option>43</option>
+              <option>44</option>
+              <option>45</option>
+            </select>
+          </div>
+          <h2 class="one2-prix">22000 Fc / 44€</h2>
+          <a href="#" class="one2-btn" onclick="showToast(event)">Acheter</a>
+        </div>
+      </div>
+
+      <div class="one2" data-cat="nike">
+        <img
+          src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/9H5L1Tff5SXN1ZBJFOVh/dunk-low-retro-shoes-76KnBL.png"
+          alt="Dunk Low"
+          onerror="
+            this.src = 'https://placehold.co/200x170/eaeaf9/1a6fc4?text=AD+Shop'
+          "
+        />
+        <div class="one2-info">
+          <h2 class="one2-titre">Nike Dunk Low Retro</h2>
+          <div class="one2-selects">
+            <select class="select-style">
+              <option value="">Couleur</option>
+              <option>⬛ Noir</option>
+              <option>⬜ Blanc</option>
+              <option>🟦 Bleu</option>
+            </select>
+            <select class="select-style">
+              <option value="">Pts</option>
+              <option>40</option>
+              <option>41</option>
+              <option>42</option>
+              <option>43</option>
+              <option>44</option>
+              <option>45</option>
+            </select>
+          </div>
+          <h2 class="one2-prix">24000 Fc / 48€</h2>
+          <a href="#" class="one2-btn" onclick="showToast(event)">Acheter</a>
+        </div>
+      </div>
+
+      <div class="one2" data-cat="nike">
+        <img
+          src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/fb7eda4a-8a8c-4a08-8282-45e20a88413a/blazer-mid-77-vintage-shoes-LPLrTm.png"
+          alt="Blazer Mid 77"
+          onerror="
+            this.src = 'https://placehold.co/200x170/eaeaf9/1a6fc4?text=AD+Shop'
+          "
+        />
+        <div class="one2-info">
+          <h2 class="one2-titre">Nike Blazer Mid 77</h2>
+          <div class="one2-selects">
+            <select class="select-style">
+              <option value="">Couleur</option>
+              <option>⬜ Blanc</option>
+              <option>⬛ Noir</option>
+            </select>
+            <select class="select-style">
+              <option value="">Pts</option>
+              <option>40</option>
+              <option>41</option>
+              <option>42</option>
+              <option>43</option>
+              <option>44</option>
+              <option>45</option>
+            </select>
+          </div>
+          <h2 class="one2-prix">21000 Fc / 42€</h2>
+          <a href="#" class="one2-btn" onclick="showToast(event)">Acheter</a>
+        </div>
+      </div>
+
+      <div class="one2" data-cat="nike">
+        <img
+          src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/wihg6tptejlwnvknhnbu/air-max-90-shoes-kMTcRH.png"
+          alt="Air Max 90"
+          onerror="
+            this.src = 'https://placehold.co/200x170/eaeaf9/1a6fc4?text=AD+Shop'
+          "
+        />
+        <div class="one2-info">
+          <h2 class="one2-titre">Nike Air Max 90</h2>
+          <div class="one2-selects">
+            <select class="select-style">
+              <option value="">Couleur</option>
+              <option>⬜ Blanc</option>
+              <option>🟥 Rouge</option>
+              <option>⬛ Noir</option>
+            </select>
+            <select class="select-style">
+              <option value="">Pts</option>
+              <option>40</option>
+              <option>41</option>
+              <option>42</option>
+              <option>43</option>
+              <option>44</option>
+              <option>45</option>
+            </select>
+          </div>
+          <h2 class="one2-prix">26000 Fc / 52€</h2>
+          <a href="#" class="one2-btn" onclick="showToast(event)">Acheter</a>
+        </div>
+      </div>
+
+      <div class="one2" data-cat="nike">
+        <img
+          src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/i1-fb68e8e1-bc83-4a7a-8875-b14cf2b7e08f/react-infinity-run-flyknit-3-road-running-shoes-mTRjZF.png"
+          alt="React Infinity"
+          onerror="
+            this.src = 'https://placehold.co/200x170/eaeaf9/1a6fc4?text=AD+Shop'
+          "
+        />
+        <div class="one2-info">
+          <h2 class="one2-titre">Nike React Infinity</h2>
+          <div class="one2-selects">
+            <select class="select-style">
+              <option value="">Couleur</option>
+              <option>⬛ Noir</option>
+              <option>🟦 Bleu</option>
+              <option>⬜ Blanc</option>
+            </select>
+            <select class="select-style">
+              <option value="">Pts</option>
+              <option>40</option>
+              <option>41</option>
+              <option>42</option>
+              <option>43</option>
+              <option>44</option>
+              <option>45</option>
+            </select>
+          </div>
+          <h2 class="one2-prix">28000 Fc / 56€</h2>
+          <a href="#" class="one2-btn" onclick="showToast(event)">Acheter</a>
+        </div>
+      </div>
+
+      <div class="one2" data-cat="nike">
+        <img
+          src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/f9c8eff6-4a0b-48fe-a7e5-20c26b06dd6f/pegasus-40-road-running-shoes-V86rXc.png"
+          alt="Pegasus 40"
+          onerror="
+            this.src = 'https://placehold.co/200x170/eaeaf9/1a6fc4?text=AD+Shop'
+          "
+        />
+        <div class="one2-info">
+          <h2 class="one2-titre">Nike Pegasus 40</h2>
+          <div class="one2-selects">
+            <select class="select-style">
+              <option value="">Couleur</option>
+              <option>🟦 Bleu</option>
+              <option>⬛ Noir</option>
+              <option>🟥 Rouge</option>
+            </select>
+            <select class="select-style">
+              <option value="">Pts</option>
+              <option>40</option>
+              <option>41</option>
+              <option>42</option>
+              <option>43</option>
+              <option>44</option>
+              <option>45</option>
+            </select>
+          </div>
+          <h2 class="one2-prix">27000 Fc / 54€</h2>
+          <a href="#" class="one2-btn" onclick="showToast(event)">Acheter</a>
+        </div>
+      </div>
+
+      <div class="one2" data-cat="nike">
+        <img
+          src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/b7d9211c-26e7-431a-ac24-b0540fb3c00f/court-vision-low-next-nature-shoes-TNHjLT.png"
+          alt="Court Vision"
+          onerror="
+            this.src = 'https://placehold.co/200x170/eaeaf9/1a6fc4?text=AD+Shop'
+          "
+        />
+        <div class="one2-info">
+          <h2 class="one2-titre">Nike Court Vision Low</h2>
+          <div class="one2-selects">
+            <select class="select-style">
+              <option value="">Couleur</option>
+              <option>⬜ Blanc</option>
+              <option>⬛ Noir</option>
+            </select>
+            <select class="select-style">
+              <option value="">Pts</option>
+              <option>40</option>
+              <option>41</option>
+              <option>42</option>
+              <option>43</option>
+              <option>44</option>
+              <option>45</option>
+            </select>
+          </div>
+          <h2 class="one2-prix">18000 Fc / 36€</h2>
+          <a href="#" class="one2-btn" onclick="showToast(event)">Acheter</a>
+        </div>
+      </div>
+
+      <!-- ===== ADIDAS (8) ===== -->
+      <div class="one2" data-cat="adidas">
+        <img
+          src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/3fb8a4f2ae3d43e7ae19af3c00f6bce4_9366/Ultraboost_23_Shoes_Black_GY9350_01_standard.jpg"
+          alt="Ultraboost 23"
+          onerror="
+            this.src = 'https://placehold.co/200x170/eaeaf9/1a6fc4?text=AD+Shop'
+          "
+        />
+        <div class="one2-info">
+          <h2 class="one2-titre">Adidas Ultraboost 23</h2>
+          <div class="one2-selects">
+            <select class="select-style">
+              <option value="">Couleur</option>
+              <option>⬛ Noir</option>
+              <option>⬜ Blanc</option>
+              <option>🟦 Bleu</option>
+            </select>
+            <select class="select-style">
+              <option value="">Pts</option>
+              <option>40</option>
+              <option>41</option>
+              <option>42</option>
+              <option>43</option>
+              <option>44</option>
+              <option>45</option>
+            </select>
+          </div>
+          <h2 class="one2-prix">29000 Fc / 58€</h2>
+          <a href="#" class="one2-btn" onclick="showToast(event)">Acheter</a>
+        </div>
+      </div>
+
+      <div class="one2" data-cat="adidas">
+        <img
+          src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/26207df2de5547f494efac490104cfb8_9366/Stan_Smith_Shoes_White_FX5502_01_standard.jpg"
+          alt="Stan Smith"
+          onerror="
+            this.src = 'https://placehold.co/200x170/eaeaf9/1a6fc4?text=AD+Shop'
+          "
+        />
+        <div class="one2-info">
+          <h2 class="one2-titre">Adidas Stan Smith</h2>
+          <div class="one2-selects">
+            <select class="select-style">
+              <option value="">Couleur</option>
+              <option>⬜ Blanc</option>
+              <option>🟩 Vert</option>
+            </select>
+            <select class="select-style">
+              <option value="">Pts</option>
+              <option>40</option>
+              <option>41</option>
+              <option>42</option>
+              <option>43</option>
+              <option>44</option>
+              <option>45</option>
+            </select>
+          </div>
+          <h2 class="one2-prix">18000 Fc / 36€</h2>
+          <a href="#" class="one2-btn" onclick="showToast(event)">Acheter</a>
+        </div>
+      </div>
+
+      <div class="one2" data-cat="adidas">
+        <img
+          src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/aef54f8975ab45428fceac7800f3ffe2_9366/NMD_R1_Shoes_Black_GZ9257_01_standard.jpg"
+          alt="NMD R1"
+          onerror="
+            this.src = 'https://placehold.co/200x170/eaeaf9/1a6fc4?text=AD+Shop'
+          "
+        />
+        <div class="one2-info">
+          <h2 class="one2-titre">Adidas NMD R1</h2>
+          <div class="one2-selects">
+            <select class="select-style">
+              <option value="">Couleur</option>
+              <option>⬛ Noir</option>
+              <option>🟥 Rouge</option>
+              <option>🟦 Bleu</option>
+            </select>
+            <select class="select-style">
+              <option value="">Pts</option>
+              <option>40</option>
+              <option>41</option>
+              <option>42</option>
+              <option>43</option>
+              <option>44</option>
+              <option>45</option>
+            </select>
+          </div>
+          <h2 class="one2-prix">23000 Fc / 46€</h2>
+          <a href="#" class="one2-btn" onclick="showToast(event)">Acheter</a>
+        </div>
+      </div>
+
+      <div class="one2" data-cat="adidas">
+        <img
+          src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/5fbc493b8d8a49a586f1ae2a01614dda_9366/Superstar_Shoes_White_EG4958_01_standard.jpg"
+          alt="Superstar"
+          onerror="
+            this.src = 'https://placehold.co/200x170/eaeaf9/1a6fc4?text=AD+Shop'
+          "
+        />
+        <div class="one2-info">
+          <h2 class="one2-titre">Adidas Superstar</h2>
+          <div class="one2-selects">
+            <select class="select-style">
+              <option value="">Couleur</option>
+              <option>⬜ Blanc</option>
+              <option>⬛ Noir</option>
+            </select>
+            <select class="select-style">
+              <option value="">Pts</option>
+              <option>40</option>
+              <option>41</option>
+              <option>42</option>
+              <option>43</option>
+              <option>44</option>
+              <option>45</option>
+            </select>
+          </div>
+          <h2 class="one2-prix">17000 Fc / 34€</h2>
+          <a href="#" class="one2-btn" onclick="showToast(event)">Acheter</a>
+        </div>
+      </div>
+
+      <div class="one2" data-cat="adidas">
+        <img
+          src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/c53e1db94d2a43ac9e74ae8002acb1e1_9366/Samba_OG_Shoes_White_B75806_01_standard.jpg"
+          alt="Samba OG"
+          onerror="
+            this.src = 'https://placehold.co/200x170/eaeaf9/1a6fc4?text=AD+Shop'
+          "
+        />
+        <div class="one2-info">
+          <h2 class="one2-titre">Adidas Samba OG</h2>
+          <div class="one2-selects">
+            <select class="select-style">
+              <option value="">Couleur</option>
+              <option>⬜ Blanc</option>
+              <option>⬛ Noir</option>
+              <option>🟩 Vert</option>
+            </select>
+            <select class="select-style">
+              <option value="">Pts</option>
+              <option>40</option>
+              <option>41</option>
+              <option>42</option>
+              <option>43</option>
+              <option>44</option>
+              <option>45</option>
+            </select>
+          </div>
+          <h2 class="one2-prix">22000 Fc / 44€</h2>
+          <a href="#" class="one2-btn" onclick="showToast(event)">Acheter</a>
+        </div>
+      </div>
+
+      <div class="one2" data-cat="adidas">
+        <img
+          src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/4a9498f8be084268a37eaf6900d26fe9_9366/Campus_00s_Shoes_Beige_HQ8707_01_standard.jpg"
+          alt="Campus 00s"
+          onerror="
+            this.src = 'https://placehold.co/200x170/eaeaf9/1a6fc4?text=AD+Shop'
+          "
+        />
+        <div class="one2-info">
+          <h2 class="one2-titre">Adidas Campus 00s</h2>
+          <div class="one2-selects">
+            <select class="select-style">
+              <option value="">Couleur</option>
+              <option>🟫 Beige</option>
+              <option>⬛ Noir</option>
+              <option>🟦 Bleu</option>
+            </select>
+            <select class="select-style">
+              <option value="">Pts</option>
+              <option>40</option>
+              <option>41</option>
+              <option>42</option>
+              <option>43</option>
+              <option>44</option>
+              <option>45</option>
+            </select>
+          </div>
+          <h2 class="one2-prix">20000 Fc / 40€</h2>
+          <a href="#" class="one2-btn" onclick="showToast(event)">Acheter</a>
+        </div>
+      </div>
+
+      <div class="one2" data-cat="adidas">
+        <img
+          src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/f36f3a9af4394073a581ac8200e887f0_9366/Forum_Low_Shoes_White_FY7757_01_standard.jpg"
+          alt="Forum Low"
+          onerror="
+            this.src = 'https://placehold.co/200x170/eaeaf9/1a6fc4?text=AD+Shop'
+          "
+        />
+        <div class="one2-info">
+          <h2 class="one2-titre">Adidas Forum Low</h2>
+          <div class="one2-selects">
+            <select class="select-style">
+              <option value="">Couleur</option>
+              <option>⬜ Blanc</option>
+              <option>⬛ Noir</option>
+              <option>🟦 Bleu</option>
+            </select>
+            <select class="select-style">
+              <option value="">Pts</option>
+              <option>40</option>
+              <option>41</option>
+              <option>42</option>
+              <option>43</option>
+              <option>44</option>
+              <option>45</option>
+            </select>
+          </div>
+          <h2 class="one2-prix">19000 Fc / 38€</h2>
+          <a href="#" class="one2-btn" onclick="showToast(event)">Acheter</a>
+        </div>
+      </div>
+
+      <div class="one2" data-cat="adidas">
+        <img
+          src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/d78f48dc1a7b42e09d78afab00e1c6ad_9366/Gazelle_Bold_Shoes_Pink_HQ6893_01_standard.jpg"
+          alt="Gazelle Bold"
+          onerror="
+            this.src = 'https://placehold.co/200x170/eaeaf9/1a6fc4?text=AD+Shop'
+          "
+        />
+        <div class="one2-info">
+          <h2 class="one2-titre">Adidas Gazelle Bold</h2>
+          <div class="one2-selects">
+            <select class="select-style">
+              <option value="">Couleur</option>
+              <option>🩷 Rose</option>
+              <option>⬛ Noir</option>
+              <option>⬜ Blanc</option>
+            </select>
+            <select class="select-style">
+              <option value="">Pts</option>
+              <option>37</option>
+              <option>38</option>
+              <option>39</option>
+              <option>40</option>
+              <option>41</option>
+            </select>
+          </div>
+          <h2 class="one2-prix">21500 Fc / 43€</h2>
+          <a href="#" class="one2-btn" onclick="showToast(event)">Acheter</a>
+        </div>
+      </div>
+
+      <!-- ===== JORDAN (7) ===== -->
+      <div class="one2" data-cat="jordan">
+        <img
+          src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/99b86beb-1d53-4e51-bc74-c2a116d48eb1/air-jordan-4-retro-shoes-G6snlK.png"
+          alt="Jordan 4"
+          onerror="
+            this.src = 'https://placehold.co/200x170/eaeaf9/1a6fc4?text=AD+Shop'
+          "
+        />
+        <div class="one2-info">
+          <h2 class="one2-titre">Jordan 4 Retro</h2>
+          <div class="one2-selects">
+            <select class="select-style">
+              <option value="">Couleur</option>
+              <option>⬛ Noir</option>
+              <option>⬜ Blanc</option>
+              <option>🟥 Rouge</option>
+            </select>
+            <select class="select-style">
+              <option value="">Pts</option>
+              <option>40</option>
+              <option>41</option>
+              <option>42</option>
+              <option>43</option>
+              <option>44</option>
+              <option>45</option>
+            </select>
+          </div>
+          <h2 class="one2-prix">45000 Fc / 90€</h2>
+          <a href="#" class="one2-btn" onclick="showToast(event)">Acheter</a>
+        </div>
+      </div>
+
+      <div class="one2" data-cat="jordan">
+        <img
+          src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/a1def0a1-40da-4bb6-b1e3-2e44e9e28d1e/air-jordan-11-retro-shoes-G4sRJF.png"
+          alt="Jordan 11"
+          onerror="
+            this.src = 'https://placehold.co/200x170/eaeaf9/1a6fc4?text=AD+Shop'
+          "
+        />
+        <div class="one2-info">
+          <h2 class="one2-titre">Jordan 11 Retro</h2>
+          <div class="one2-selects">
+            <select class="select-style">
+              <option value="">Couleur</option>
+              <option>⬜ Blanc</option>
+              <option>⬛ Noir</option>
+            </select>
+            <select class="select-style">
+              <option value="">Pts</option>
+              <option>40</option>
+              <option>41</option>
+              <option>42</option>
+              <option>43</option>
+              <option>44</option>
+              <option>45</option>
+            </select>
+          </div>
+          <h2 class="one2-prix">50000 Fc / 100€</h2>
+          <a href="#" class="one2-btn" onclick="showToast(event)">Acheter</a>
+        </div>
+      </div>
+
+      <div class="one2" data-cat="jordan">
+        <img
+          src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/a3bc16c7-6a59-4ba1-b8fe-5cbd843c3090/air-jordan-1-mid-shoes-BpARGV.png"
+          alt="Jordan 1 Mid"
+          onerror="
+            this.src = 'https://placehold.co/200x170/eaeaf9/1a6fc4?text=AD+Shop'
+          "
+        />
+        <div class="one2-info">
+          <h2 class="one2-titre">Jordan 1 Mid</h2>
+          <div class="one2-selects">
+            <select class="select-style">
+              <option value="">Couleur</option>
+              <option>🟥 Rouge</option>
+              <option>⬛ Noir</option>
+              <option>🟦 Bleu</option>
+            </select>
+            <select class="select-style">
+              <option value="">Pts</option>
+              <option>40</option>
+              <option>41</option>
+              <option>42</option>
+              <option>43</option>
+              <option>44</option>
+              <option>45</option>
+            </select>
+          </div>
+          <h2 class="one2-prix">30000 Fc / 60€</h2>
+          <a href="#" class="one2-btn" onclick="showToast(event)">Acheter</a>
+        </div>
+      </div>
+
+      <div class="one2" data-cat="jordan">
+        <img
+          src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/i1-7b5ffdff-3f05-4e9c-a4fd-7dfd2e6ed26f/air-jordan-1-low-shoes-kqWQcM.png"
+          alt="Jordan 1 Low"
+          onerror="
+            this.src = 'https://placehold.co/200x170/eaeaf9/1a6fc4?text=AD+Shop'
+          "
+        />
+        <div class="one2-info">
+          <h2 class="one2-titre">Jordan 1 Low</h2>
+          <div class="one2-selects">
+            <select class="select-style">
+              <option value="">Couleur</option>
+              <option>⬜ Blanc</option>
+              <option>⬛ Noir</option>
+              <option>🟩 Vert</option>
+            </select>
+            <select class="select-style">
+              <option value="">Pts</option>
+              <option>40</option>
+              <option>41</option>
+              <option>42</option>
+              <option>43</option>
+              <option>44</option>
+              <option>45</option>
+            </select>
+          </div>
+          <h2 class="one2-prix">28000 Fc / 56€</h2>
+          <a href="#" class="one2-btn" onclick="showToast(event)">Acheter</a>
+        </div>
+      </div>
+
+      <div class="one2" data-cat="jordan">
+        <img
+          src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/69e02de3-0278-4b10-b15f-8f79a9c3c49b/air-jordan-3-retro-shoes-NRdjLq.png"
+          alt="Jordan 3"
+          onerror="
+            this.src = 'https://placehold.co/200x170/eaeaf9/1a6fc4?text=AD+Shop'
+          "
+        />
+        <div class="one2-info">
+          <h2 class="one2-titre">Jordan 3 Retro</h2>
+          <div class="one2-selects">
+            <select class="select-style">
+              <option value="">Couleur</option>
+              <option>⬜ Blanc</option>
+              <option>⬛ Noir</option>
+              <option>🟥 Rouge</option>
+            </select>
+            <select class="select-style">
+              <option value="">Pts</option>
+              <option>40</option>
+              <option>41</option>
+              <option>42</option>
+              <option>43</option>
+              <option>44</option>
+              <option>45</option>
+            </select>
+          </div>
+          <h2 class="one2-prix">42000 Fc / 84€</h2>
+          <a href="#" class="one2-btn" onclick="showToast(event)">Acheter</a>
+        </div>
+      </div>
+
+      <div class="one2" data-cat="jordan">
+        <img
+          src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/7da63a6e-d15f-43f2-b8af-d14b0f4c6dae/jordan-jumpman-mvp-shoes-7lJ8VD.png"
+          alt="Jordan Jumpman"
+          onerror="
+            this.src = 'https://placehold.co/200x170/eaeaf9/1a6fc4?text=AD+Shop'
+          "
+        />
+        <div class="one2-info">
+          <h2 class="one2-titre">Jordan Jumpman MVP</h2>
+          <div class="one2-selects">
+            <select class="select-style">
+              <option value="">Couleur</option>
+              <option>⬛ Noir</option>
+              <option>⬜ Blanc</option>
+            </select>
+            <select class="select-style">
+              <option value="">Pts</option>
+              <option>40</option>
+              <option>41</option>
+              <option>42</option>
+              <option>43</option>
+              <option>44</option>
+              <option>45</option>
+            </select>
+          </div>
+          <h2 class="one2-prix">32000 Fc / 64€</h2>
+          <a href="#" class="one2-btn" onclick="showToast(event)">Acheter</a>
+        </div>
+      </div>
+
+      <div class="one2" data-cat="jordan">
+        <img
+          src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/3e3a4a48-9b38-4df2-ab31-b1c8e2cc1a47/jordan-spizike-low-shoes-MWb96R.png"
+          alt="Jordan Spizike"
+          onerror="
+            this.src = 'https://placehold.co/200x170/eaeaf9/1a6fc4?text=AD+Shop'
+          "
+        />
+        <div class="one2-info">
+          <h2 class="one2-titre">Jordan Spizike Low</h2>
+          <div class="one2-selects">
+            <select class="select-style">
+              <option value="">Couleur</option>
+              <option>🟩 Vert</option>
+              <option>⬛ Noir</option>
+              <option>⬜ Blanc</option>
+            </select>
+            <select class="select-style">
+              <option value="">Pts</option>
+              <option>40</option>
+              <option>41</option>
+              <option>42</option>
+              <option>43</option>
+              <option>44</option>
+              <option>45</option>
+            </select>
+          </div>
+          <h2 class="one2-prix">35000 Fc / 70€</h2>
+          <a href="#" class="one2-btn" onclick="showToast(event)">Acheter</a>
+        </div>
+      </div>
+
+      <!-- ===== PUMA (7) ===== -->
+      <div class="one2" data-cat="puma">
+        <img
+          src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/374915/01/sv01/fnd/PNA/fmt/png/Suede-Classic-XXI-Sneakers"
+          alt="Suede Classic"
+          onerror="
+            this.src = 'https://placehold.co/200x170/eaeaf9/1a6fc4?text=AD+Shop'
+          "
+        />
+        <div class="one2-info">
+          <h2 class="one2-titre">Puma Suede Classic</h2>
+          <div class="one2-selects">
+            <select class="select-style">
+              <option value="">Couleur</option>
+              <option>⬛ Noir</option>
+              <option>🟥 Rouge</option>
+              <option>🟦 Bleu</option>
+            </select>
+            <select class="select-style">
+              <option value="">Pts</option>
+              <option>40</option>
+              <option>41</option>
+              <option>42</option>
+              <option>43</option>
+              <option>44</option>
+              <option>45</option>
+            </select>
+          </div>
+          <h2 class="one2-prix">15000 Fc / 30€</h2>
+          <a href="#" class="one2-btn" onclick="showToast(event)">Acheter</a>
+        </div>
+      </div>
+
+      <div class="one2" data-cat="puma">
+        <img
+          src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/390776/01/sv01/fnd/PNA/fmt/png/RS-X-Efekt-PRM-Unisex-Sneakers"
+          alt="RS-X Efekt"
+          onerror="
+            this.src = 'https://placehold.co/200x170/eaeaf9/1a6fc4?text=AD+Shop'
+          "
+        />
+        <div class="one2-info">
+          <h2 class="one2-titre">Puma RS-X Efekt</h2>
+          <div class="one2-selects">
+            <select class="select-style">
+              <option value="">Couleur</option>
+              <option>⬜ Blanc</option>
+              <option>⬛ Noir</option>
+              <option>🟥 Rouge</option>
+            </select>
+            <select class="select-style">
+              <option value="">Pts</option>
+              <option>40</option>
+              <option>41</option>
+              <option>42</option>
+              <option>43</option>
+              <option>44</option>
+              <option>45</option>
+            </select>
+          </div>
+          <h2 class="one2-prix">19500 Fc / 39€</h2>
+          <a href="#" class="one2-btn" onclick="showToast(event)">Acheter</a>
+        </div>
+      </div>
+
+      <div class="one2" data-cat="puma">
+        <img
+          src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/395098/02/sv01/fnd/PNA/fmt/png/Cali-Court-Women-s-Sneakers"
+          alt="Cali Court"
+          onerror="
+            this.src = 'https://placehold.co/200x170/eaeaf9/1a6fc4?text=AD+Shop'
+          "
+        />
+        <div class="one2-info">
+          <h2 class="one2-titre">Puma Cali Court</h2>
+          <div class="one2-selects">
+            <select class="select-style">
+              <option value="">Couleur</option>
+              <option>⬜ Blanc</option>
+              <option>🩷 Rose</option>
+            </select>
+            <select class="select-style">
+              <option value="">Pts</option>
+              <option>37</option>
+              <option>38</option>
+              <option>39</option>
+              <option>40</option>
+              <option>41</option>
+            </select>
+          </div>
+          <h2 class="one2-prix">17000 Fc / 34€</h2>
+          <a href="#" class="one2-btn" onclick="showToast(event)">Acheter</a>
+        </div>
+      </div>
+
+      <div class="one2" data-cat="puma">
+        <img
+          src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/396463/02/sv01/fnd/PNA/fmt/png/Palermo-Sneakers"
+          alt="Palermo"
+          onerror="
+            this.src = 'https://placehold.co/200x170/eaeaf9/1a6fc4?text=AD+Shop'
+          "
+        />
+        <div class="one2-info">
+          <h2 class="one2-titre">Puma Palermo</h2>
+          <div class="one2-selects">
+            <select class="select-style">
+              <option value="">Couleur</option>
+              <option>⬜ Blanc</option>
+              <option>🟦 Bleu</option>
+              <option>⬛ Noir</option>
+            </select>
+            <select class="select-style">
+              <option value="">Pts</option>
+              <option>40</option>
+              <option>41</option>
+              <option>42</option>
+              <option>43</option>
+              <option>44</option>
+              <option>45</option>
+            </select>
+          </div>
+          <h2 class="one2-prix">16000 Fc / 32€</h2>
+          <a href="#" class="one2-btn" onclick="showToast(event)">Acheter</a>
+        </div>
+      </div>
+
+      <div class="one2" data-cat="puma">
+        <img
+          src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/377748/02/sv01/fnd/PNA/fmt/png/Velocity-NITRO-3-Women-s-Running-Shoes"
+          alt="Velocity Nitro"
+          onerror="
+            this.src = 'https://placehold.co/200x170/eaeaf9/1a6fc4?text=AD+Shop'
+          "
+        />
+        <div class="one2-info">
+          <h2 class="one2-titre">Puma Velocity Nitro 3</h2>
+          <div class="one2-selects">
+            <select class="select-style">
+              <option value="">Couleur</option>
+              <option>⬛ Noir</option>
+              <option>🟨 Jaune</option>
+              <option>🟥 Rouge</option>
+            </select>
+            <select class="select-style">
+              <option value="">Pts</option>
+              <option>37</option>
+              <option>38</option>
+              <option>39</option>
+              <option>40</option>
+              <option>41</option>
+            </select>
+          </div>
+          <h2 class="one2-prix">23000 Fc / 46€</h2>
+          <a href="#" class="one2-btn" onclick="showToast(event)">Acheter</a>
+        </div>
+      </div>
+
+      <div class="one2" data-cat="puma">
+        <img
+          src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/381777/01/sv01/fnd/PNA/fmt/png/Future-Rider-Play-On-Sneakers"
+          alt="Future Rider"
+          onerror="
+            this.src = 'https://placehold.co/200x170/eaeaf9/1a6fc4?text=AD+Shop'
+          "
+        />
+        <div class="one2-info">
+          <h2 class="one2-titre">Puma Future Rider</h2>
+          <div class="one2-selects">
+            <select class="select-style">
+              <option value="">Couleur</option>
+              <option>⬜ Blanc</option>
+              <option>🟥 Rouge</option>
+              <option>🟦 Bleu</option>
+            </select>
+            <select class="select-style">
+              <option value="">Pts</option>
+              <option>40</option>
+              <option>41</option>
+              <option>42</option>
+              <option>43</option>
+              <option>44</option>
+              <option>45</option>
+            </select>
+          </div>
+          <h2 class="one2-prix">14000 Fc / 28€</h2>
+          <a href="#" class="one2-btn" onclick="showToast(event)">Acheter</a>
+        </div>
+      </div>
+
+      <div class="one2" data-cat="puma">
+        <img
+          src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/377431/01/sv01/fnd/PNA/fmt/png/Clyde-All-Pro-Team-Basketball-Shoes"
+          alt="Clyde All-Pro"
+          onerror="
+            this.src = 'https://placehold.co/200x170/eaeaf9/1a6fc4?text=AD+Shop'
+          "
+        />
+        <div class="one2-info">
+          <h2 class="one2-titre">Puma Clyde All-Pro</h2>
+          <div class="one2-selects">
+            <select class="select-style">
+              <option value="">Couleur</option>
+              <option>⬛ Noir</option>
+              <option>⬜ Blanc</option>
+            </select>
+            <select class="select-style">
+              <option value="">Pts</option>
+              <option>40</option>
+              <option>41</option>
+              <option>42</option>
+              <option>43</option>
+              <option>44</option>
+              <option>45</option>
+            </select>
+          </div>
+          <h2 class="one2-prix">25000 Fc / 50€</h2>
+          <a href="#" class="one2-btn" onclick="showToast(event)">Acheter</a>
+        </div>
+      </div>
+    </div>
+    <!-- fin products-wrapper -->
+
+    <!-- TOAST -->
+    <div class="toast" id="toast">✅ Ajouté au panier !</div>
+
+    <footer class="terminus">
+      <div class="ter1">
+        <h3>On Vous Presente</h3>
+        <img src="./picture/logo 2.png" alt="" />
+        <p>Des produits de bonne qualité</p>
+        <p>et des livraisons trés rapides</p>
+        <div class="livre"><p>🚛: Livraison partout aux comores</p></div>
+      </div>
+      <div class="ter2">
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="index.html">Acceuil</a></li>
+          <li><a href="produit.html">Nos Produit</a></li>
+          <li><a href="panier.html">Le Panier <i class="fa-solid fa-cart-shopping"></i><span class="cart-counter">0</span></a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div>📞: 034 20 707 87</div>
+      </div>
+      <div class="ter3">
+        <h3>Nous contacter rapidement</h3>
+        <p>whatsapp:+261 034 20 707 87</p>
+        <p>whatsapp busness:+261 037 89 307 10</p>
+        <p>whatsapp manager :+269 473 24 50</p>
+        <P>facebook: Adjmal Dhinnoune</p>
+          <div class="mail">drimsofficiel7@gmail.com</div>
+      </div>
+      <div class="ter4">
+        <h3>Vous pouvez</h3>
+        <p>-Commander se qu'on ne vend pas.</p>
+        <p>-Envoyer des photos de produit.</p>
+        <p>-Avoir des Bonus si vous etes fidéle a nous.</p>
+        <p>-Avoir des Cadeaux selon la quantité de </p>
+        <p>produit Commandé.</p>
+        <div class="boom"><a href="produit.html">Commander</a></div>
+      </div>
+    </footer>
+
+    <nav class="bottom-nav" id="bottomNav">
+      <a href="../index.html" class="bottom-nav-item" id="bn-accueil">
+        <div class="bn-icon-wrap">
+          <i class="fa-solid fa-house"></i>
+        </div>
+        <span class="bn-label">Accueil</span>
+      </a>
+
+      <a href="../produit.html" class="bottom-nav-item" id="bn-produit">
+        <div class="bn-icon-wrap">
+          <i class="fa-solid fa-shirt"></i>
+        </div>
+        <span class="bn-label">Produits</span>
+      </a>
+
+      <a href="../panier.html" class="bottom-nav-item" id="bn-panier">
+        <div class="bn-icon-wrap">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="bn-badge" id="bn-cart-count" style="display: none"
+            >0</span
+          >
+        </div>
+        <span class="bn-label">Panier</span>
+      </a>
+
+      <a href="../contact.html" class="bottom-nav-item" id="bn-contact">
+        <div class="bn-icon-wrap">
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+        <span class="bn-label">Contact</span>
+      </a>
+    </nav>
+
+    <div class="bn-spacer"></div>
+
+    <script src="chaussures.js"></script>
+    <script src="../index.js"></script>
+    <script src="../produit.js"></script>
+  </body>
+</html>

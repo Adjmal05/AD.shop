@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Recherche — AD.Shop</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="recherche.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="parie1">
+    <nav class="navbar">
+      <div class="burger" id="burger">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="logo-be"><img src="./picture/logo 2.png" alt=""/></div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Acceuil</a></li>
+        <li><a href="produit.html">Nos Produit</a></li>
+        <li><a href="panier.html">Panier <i class="fa-solid fa-cart-shopping"></i><span class="cart-counter">0</span></a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="dropdown-menu" id="dropdown-menu">
+      <ul>
+        <li><a href="index.html">Acceuil</a></li>
+        <li><a href="produit.html">Nos Produit</a></li>
+        <li><a href="panier.html">Le Panier <i class="fa-solid fa-cart-shopping"></i><span class="cart-counter">0</span></a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- BANNIÈRE -->
+  <section class="rech-banner">
+    <div class="rech-banner-inner">
+      <h1><i class="fa-solid fa-magnifying-glass"></i> Rechercher un produit</h1>
+      <p>Trouvez rapidement ce que vous cherchez</p>
+    </div>
+  </section>
+
+  <!-- BARRE DE RECHERCHE -->
+  <div class="rech-search-wrap">
+    <div class="rech-search-box">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Ex: Nike Air Max, Jordan, Adidas..."
+        autofocus
+      />
+      <button id="clearBtn" style="display:none">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="rech-count" id="rech-count"></div>
+  </div>
+
+  <!-- ÉTAT CHARGEMENT -->
+  <div class="rech-loading" id="rech-loading">
+    <div class="rech-spinner"></div>
+    <p>Chargement des produits...</p>
+  </div>
+
+  <!-- RÉSULTATS -->
+  <div class="rech-grid" id="rech-grid"></div>
+
+  <!-- ÉTAT VIDE -->
+  <div class="rech-empty" id="rech-empty" style="display:none">
+    <i class="fa-solid fa-box-open"></i>
+    <h2>Aucun produit trouvé</h2>
+    <p>Essayez un autre mot-clé</p>
+  </div>
+
+  <!-- BOTTOM NAV -->
+  <nav class="bottom-nav" id="bottomNav">
+    <a href="index.html" class="bottom-nav-item" id="bn-accueil">
+      <div class="bn-icon-wrap"><i class="fa-solid fa-house"></i></div>
+      <span class="bn-label">Accueil</span>
+    </a>
+    <a href="produit.html" class="bottom-nav-item" id="bn-produit">
+      <div class="bn-icon-wrap"><i class="fa-solid fa-shirt"></i></div>
+      <span class="bn-label">Produits</span>
+    </a>
+    <a href="panier.html" class="bottom-nav-item" id="bn-panier">
+      <div class="bn-icon-wrap">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="bn-badge" id="bn-cart-count" style="display:none">0</span>
+      </div>
+      <span class="bn-label">Panier</span>
+    </a>
+    <a href="contact.html" class="bottom-nav-item" id="bn-contact">
+      <div class="bn-icon-wrap"><i class="fa-solid fa-envelope"></i></div>
+      <span class="bn-label">Contact</span>
+    </a>
+  </nav>
+  <div class="bn-spacer"></div>
+
+  <script src="index.js"></script>
+  <script src="recherche.js"></script>
+</body>
+</html>

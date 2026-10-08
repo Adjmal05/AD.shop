@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paiement Mvola — AD Shop</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mvola.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+      emailjs.init("kkhG9zr1it2395kww");
+    </script>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header class="parie1">
+      <nav class="navbar">
+        <div class="burger" id="burger">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="logo-be">
+          <img src="./picture/logo 2.png" alt="AD Shop" />
+        </div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Acceuil</a></li>
+          <li><a href="produit.html">Nos Produit</a></li>
+          <li>
+            <a href="panier.html"
+              >Le Panier <i class="fa-solid fa-cart-shopping"></i
+              ><span class="cart-counter">0</span
+            ></a>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-search" id="nav-search">
+          <!-- Barre qui s'ouvre au clic (desktop) -->
+          <div class="nav-search-box" id="nav-search-box">
+            <input
+              type="text"
+              id="nav-search-input"
+              placeholder="Rechercher un produit..."
+            />
+            <button onclick="lancerRecherche()">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+          <!-- Icône loupe -->
+          <button
+            class="nav-search-icon"
+            id="nav-search-icon"
+            onclick="toggleSearch()"
+          >
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+      </nav>
+      <div class="dropdown-menu" id="dropdown-menu">
+        <ul>
+          <li><a href="index.html">Acceuil</a></li>
+          <li><a href="produit.html">Nos Produit</a></li>
+          <li>
+            <a href="panier.html"
+              >Le Panier <i class="fa-solid fa-cart-shopping"></i
+              ><span class="cart-counter">0</span
+            ></a>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- BANNIÈRE -->
+    <section class="mv-banner">
+      <div class="mv-banner-inner">
+        <div class="mv-banner-icon">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <div>
+          <h1>Paiement sécurisé</h1>
+          <p>Finalisez votre commande via Mvola</p>
+        </div>
+      </div>
+      <div class="mv-banner-badge">
+        <i class="fa-solid fa-lock"></i> SSL Sécurisé
+      </div>
+    </section>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="mv-main">
+      <!-- COLONNE GAUCHE : instructions -->
+      <section class="mv-instructions">
+        <div class="mv-card mv-header-card">
+          <div class="mv-logo-wrap">
+            <span class="mv-logo-icon">💚</span>
+            <div>
+              <h2>Mvola</h2>
+              <p>Transfert mobile sécurisé</p>
+            </div>
+          </div>
+          <div class="mv-total-badge">
+            Total : <strong id="mv-total-display">—</strong>
+          </div>
+        </div>
+
+        <div class="mv-card">
+          <h3 class="mv-section-title">
+            <i class="fa-solid fa-list-ol"></i> Comment payer ?
+          </h3>
+
+          <div class="mv-step">
+            <div class="mv-step-num">1</div>
+            <div class="mv-step-content">
+              <strong>Ouvrez Mvola</strong>
+              <p>
+                Lancez l'application Mvola sur votre téléphone, ou composez
+                <span class="mv-code">#444#</span> (réseau Telma uniquement)
+              </p>
+            </div>
+          </div>
+
+          <div class="mv-step">
+            <div class="mv-step-num">2</div>
+            <div class="mv-step-content">
+              <strong>Transférez au numéro</strong>
+              <div class="mv-numero-box">
+                <i class="fa-solid fa-phone"></i>
+                <span>477 04 91</span>
+                <button class="mv-copy-btn" onclick="copyNumero()">
+                  <i class="fa-regular fa-copy"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="mv-step">
+            <div class="mv-step-num">3</div>
+            <div class="mv-step-content">
+              <strong>Montant exact à envoyer</strong>
+              <div class="mv-montant-box">
+                <span id="mv-montant-ar">—</span>
+                <span class="mv-euro" id="mv-montant-eu"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mv-step">
+            <div class="mv-step-num">4</div>
+            <div class="mv-step-content">
+              <strong>Notez la référence</strong>
+              <p>
+                Après paiement, vous recevrez un SMS avec un numéro de
+                transaction (ex: <span class="mv-code">2453XXXXXX</span>).
+                Gardez-le.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Garanties -->
+        <div class="mv-garanties">
+          <div class="mv-garantie">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span>Paiement sécurisé</span>
+          </div>
+          <div class="mv-garantie">
+            <i class="fa-solid fa-truck-fast"></i>
+            <span>Livraison rapide</span>
+          </div>
+          <div class="mv-garantie">
+            <i class="fa-solid fa-headset"></i>
+            <span>Support 24/7</span>
+          </div>
+          <div class="mv-garantie">
+            <i class="fa-solid fa-rotate-left"></i>
+            <span>Retour 7 jours</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- COLONNE DROITE : formulaire -->
+      <aside class="mv-form-col">
+        <div class="mv-card mv-form-card">
+          <h3 class="mv-section-title">
+            <i class="fa-solid fa-pen-to-square"></i> Confirmer votre paiement
+          </h3>
+          <p class="mv-form-subtitle">
+            Remplissez ce formulaire après avoir effectué le virement Mvola.
+          </p>
+
+          <div class="mv-field">
+            <label for="client-nom">
+              <i class="fa-solid fa-user"></i> Nom complet
+            </label>
+            <input
+              type="text"
+              id="client-nom"
+              placeholder="Ex: Mohamed Abdou"
+            />
+          </div>
+
+          <div class="mv-field">
+            <label for="client-tel">
+              <i class="fa-solid fa-phone"></i> Numéro de téléphone
+            </label>
+            <input type="tel" id="client-tel" placeholder="Ex: 477 XX XX" />
+          </div>
+
+          <div class="mv-field">
+            <label for="client-adresse">
+              <i class="fa-solid fa-location-dot"></i> Adresse de livraison
+            </label>
+            <input
+              type="text"
+              id="client-adresse"
+              placeholder="Ex: Ouani, Mutsamudu..."
+            />
+          </div>
+
+          <div class="mv-field">
+            <label for="ref-transaction">
+              <i class="fa-solid fa-hashtag"></i> Référence de transaction Mvola
+            </label>
+            <input
+              type="text"
+              id="ref-transaction"
+              placeholder="Ex: 2453XXXXXX"
+            />
+          </div>
+
+          <button
+            class="mv-btn-confirm"
+            id="mv-btn-confirm"
+            onclick="confirmerPaiement()"
+          >
+            <i class="fa-solid fa-check-circle"></i>
+            J'ai payé — Confirmer la commande
+          </button>
+
+          <a href="panier.html" class="mv-btn-retour">
+            <i class="fa-solid fa-arrow-left"></i> Retour au panier
+          </a>
+        </div>
+      </aside>
+    </main>
+
+    <!-- MODAL SUCCÈS -->
+    <div class="mv-modal-overlay" id="mv-modal">
+      <div class="mv-modal-box">
+        <div class="mv-modal-check">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <h2>Commande confirmée !</h2>
+        <p>
+          Merci pour votre achat. Nous allons vérifier votre paiement Mvola et
+          vous contacter très bientôt.
+        </p>
+        <div class="mv-modal-detail" id="mv-modal-detail"></div>
+        <button class="mv-modal-btn mv-btn-wa" onclick="ouvrirWhatsApp()">
+          <i class="fa-brands fa-whatsapp"></i> Suivre sur WhatsApp
+        </button>
+        <a href="index.html" class="mv-modal-btn mv-btn-home">
+          <i class="fa-solid fa-house"></i> Retour à l'accueil
+        </a>
+      </div>
+    </div>
+
+    <!-- TOAST -->
+    <div class="mv-toast" id="mv-toast"></div>
+
+    <nav class="bottom-nav" id="bottomNav">
+      <a href="index.html" class="bottom-nav-item" id="bn-accueil">
+        <div class="bn-icon-wrap">
+          <i class="fa-solid fa-house"></i>
+        </div>
+        <span class="bn-label">Accueil</span>
+      </a>
+
+      <a href="produit.html" class="bottom-nav-item" id="bn-produit">
+        <div class="bn-icon-wrap">
+          <i class="fa-solid fa-shirt"></i>
+        </div>
+        <span class="bn-label">Produits</span>
+      </a>
+
+      <a href="panier.html" class="bottom-nav-item" id="bn-panier">
+        <div class="bn-icon-wrap">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="bn-badge" id="bn-cart-count" style="display: none"
+            >0</span
+          >
+        </div>
+        <span class="bn-label">Panier</span>
+      </a>
+
+      <a href="contact.html" class="bottom-nav-item" id="bn-contact">
+        <div class="bn-icon-wrap">
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+        <span class="bn-label">Contact</span>
+      </a>
+    </nav>
+
+    <div class="bn-spacer"></div>
+
+    <script src="panier.js"></script>
+    <script src="index.js"></script>
+    <script src="mvola.js"></script>
+  </body>
+</html>

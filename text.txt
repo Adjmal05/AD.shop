@@ -1,0 +1,24 @@
+-par exemple un t-shirt de avoir des numero (S L M Xl XXl) et pour sa on vas un ptit truc qui descend et on choisi 
+               ---------
+- les chaussures aussi auront besoin de crocher les pointures donc on fait la meme chose avec le t-shirt
+      ----------
+-En se qui est des couleurs des choses on peut aussi faire la meme chose lais c'est a voir 
+*Bon dans la page d'acceuil la ou il ya Nos produits phares, on vas mettre des images par exemple, 
+une photo qui contient plusieurs photos de parfums et de meme pour les t-shirt et chaussures...ect        
+
+
+
+
+Bon pour les produits par exemple chaussures: on vas demander a l' IA de nous generé des pages html, ccs 
+et js qui vont contenir a peut prés 50 photos
+
+
+-je voudrais aussi savoir le nombre de fois que le produit etait acheter 
+
+-Mettre une barre de recherche pour que quand on met le nom d'un produit ou il le trouve direct et si le produits n'est 
+dans la boutique sa l'affiche pas
+
+dans la barre de recherche, quand on tape dessus j'aimerai que sa nous redirige vers une page qui contient tous les noms 
+des produits disponibles dans la boutique et on peut choisir et chercher le produit qu'on veut si il est disponible  
+
+

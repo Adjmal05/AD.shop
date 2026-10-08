@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AD.Shop</title>
+    <link rel="stylesheet" href="test.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+   <header class="parie1">
+      <nav class="navbar">
+        <div class="burger" id="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="logo-be"><img src="./picture/logo 2.png" alt="" /></div>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Acceuil</a></li>
+          <li><a href="produit.html">Nos Produit</a></li>
+          <li><a href="panier.html">Panier <i class="fa-solid fa-cart-shopping"></i></a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="online-users">
+    <span class="status-dot"></span>
+    <span id="visitor-count">0</span>
+    <span class="online-text">en ligne</span>
+       </div>
+
+        <div class="nav-search" id="nav-search">
+  <!-- Barre qui s'ouvre au clic (desktop) -->
+  <div class="nav-search-box" id="nav-search-box">
+    <input
+      type="text"
+      id="nav-search-input"
+      placeholder="Rechercher un produit..."
+    />
+    <button onclick="lancerRecherche()">
+      <i class="fa-solid fa-arrow-right"></i>
+    </button>
+  </div>
+  <!-- Icône loupe -->
+  <button class="nav-search-icon" id="nav-search-icon" onclick="toggleSearch()">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+</div>
+      </nav>
+
+      <div class="dropdown-menu" id="dropdown-menu">
+        <ul>
+          <li><a href="index.html">Acceuil</a></li>
+          <li><a href="produit.html">Nos Produit</a></li>
+          <li><a href="panier.html">Le Panier <i class="fa-solid fa-cart-shopping"></i></a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <div class="partie2">
+        <div class="back">
+          <div class="title">
+            <h1>Bienvenue sur Notre Boutique !</h1>
+            <p>Décrouvrez nos meilleurs Produits</p>
+            <a href="produit.html">Nos produits ➜</a>
+          </div>
+        </div>
+        <div class="T1">
+          <span></span>
+          <h1>Nos produits Phares</h1>
+          <span></span>
+          <p>Les plus Populaires du moment</p>
+        </div>
+
+        <div class="slider" id="slider">
+          <div class="slide-track" id="track">
+            <img src="./picture/img1.jpg" />
+            <img src="./picture/img2.jpg" />
+            <img src="./picture/img3.jpg" />
+            <img src="./picture/img4.jpg" />
+            <img src="./picture/img5.jpg" />
+            <img src="./picture/img6.jpg" />
+            <img src="./picture/img7.jpg" />
+            <img src="./picture/img8.jpg" />
+            <img src="./picture/img9.jpg" />
+            <img src="./picture/img10.jpg" />
+            <img src="./picture/img11.jpg" />
+
+            <img src="./picture/img1.jpg" />
+            <img src="./picture/img2.jpg" />
+            <img src="./picture/img3.jpg" />
+            <img src="./picture/img4.jpg" />
+            <img src="./picture/img5.jpg" />
+            <img src="./picture/img6.jpg" />
+            <img src="./picture/img7.jpg" />
+            <img src="./picture/img8.jpg" />
+            <img src="./picture/img9.jpg" />
+            <img src="./picture/img10.jpg" />
+            <img src="./picture/img11.jpg" />
+          </div>
+        </div>
+      </div>
+      <div class="partie3">
+        <div class="pour">
+          <h1>Pourquoi choisir AD-Shop</h1>
+        </div>
+        <div class="pourquoi">
+          <div class="I1">
+            <img src="./picture/livraison2.png" alt="" />
+            <p>Livraison rapide</p>
+          </div>
+          <div class="I2">
+            <img src="./picture/secu.colis2.png" alt="" />
+            <p>Colis et paiement sécurisé</p>
+          </div>
+          <div class="I3">
+            <img src="./picture/Quality2.png" alt="" />
+            <p>Trés bonne qualité</p>
+          </div>
+          <div class="I4">
+            <h3>Vous ne trouvez pas un produit?</h3>
+            <p>
+              Faites-nous une demande et nous le <br />trouverons pour vous !
+            </p>
+            <a href="contact.html">Demande </a>
+          </div>
+        </div>
+      </div>
+      <div class="partie4">
+        <div class="pour">
+          <h1>Avis de nos Clients</h1>
+        </div>
+        <div class="client">
+          <div class="A1">
+            <img src="./picture/profil1.webp" alt="" />
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p>
+              🗨️: Service impecable,Acceuil chaleureux🥰 et personnel trés
+              gentil😇 et respectueux, ça fait plaisir Merci encore🫶!
+            </p>
+          </div>
+          <div class="A2">
+            <img src="./picture/profil2.2.png" alt="" />
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p>
+              🗨️: Trés bonne qualité qualité🫠, excatement comme sur les
+              photos📸.Les articles sont bien finis et durables.Je suis trés
+              satisfait🤝.
+            </p>
+          </div>
+          <div class="A3">
+            <img src="./picture/profil3.png" alt="" />
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p>
+              🗨️: Livraison rapide🚚 et bien organisée, j'ai reçu mon colis en
+              parfait état✌️. Mes commande sont traitée rapidement, rien à
+              dire🫠.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="partie5">
+        <h1>Prét à faires des bonnes achats</h1>
+        <div class="achat">
+        <a href="produit.html">Commencez vos achats</a>
+        </div>
+      </div>
+    </main>
+    <footer class="terminus">
+      <div class="ter1">
+        <h3>On Vous Presente</h3>
+        <img src="./picture/logo 2.png" alt="" />
+        <p>Des produits de bonne qualité</p>
+        <p>et des livraisons trés rapides</p>
+        <div class="livre"><p>🚛: Livraison partout aux comores</p></div>
+      </div>
+      <div class="ter2">
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="index.html">Acceuil</a></li>
+          <li><a href="produit.html">Nos Produit</a></li>
+          <li><a href="panier.html">Le Panier <i class="fa-solid fa-cart-shopping"></i></a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div>📞: 034 20 707 87</div>
+      </div>
+      <div class="ter3">
+        <h3>Nous contacter rapidement</h3>
+        <p>whatsapp:+261 034 20 707 87</p>
+        <p>whatsapp busness:+261 037 89 307 10</p>
+        <p>whatsapp manager :+269 473 24 50</p>
+        <P>facebook: Adjmal Dhinnoune</p>
+          <div class="mail">drimsofficiel7@gmail.com</div>
+      </div>
+      <div class="ter4">
+        <h3>Vous pouvez</h3>
+        <p>-Commander se qu'on ne vend pas.</p>
+        <p>-Envoyer des photos de produit.</p>
+        <p>-Avoir des Bonus si vous etes fidéle a nous.</p>
+        <p>-Avoir des Cadeaux selon la quantité de </p>
+        <p>produit Commandé.</p>
+        <div class="boom"><a href="produit.html">Commander</a></div>
+      </div>
+    </footer>
+     <nav class="bottom-nav" id="bottomNav">
+  <a href="index.html" class="bottom-nav-item" id="bn-accueil">
+    <div class="bn-icon-wrap">
+      <i class="fa-solid fa-house"></i>
+    </div>
+    <span class="bn-label">Accueil</span>
+  </a>
+
+  <a href="produit.html" class="bottom-nav-item" id="bn-produit">
+    <div class="bn-icon-wrap">
+      <i class="fa-solid fa-shirt"></i>
+    </div>
+    <span class="bn-label">Produits</span>
+  </a>
+
+  <a href="panier.html" class="bottom-nav-item" id="bn-panier">
+    <div class="bn-icon-wrap">
+      <i class="fa-solid fa-cart-shopping"></i>
+      <span class="bn-badge" id="bn-cart-count" style="display:none">0</span>
+    </div>
+    <span class="bn-label">Panier</span>
+  </a>
+
+  <a href="contact.html" class="bottom-nav-item" id="bn-contact">
+    <div class="bn-icon-wrap">
+      <i class="fa-solid fa-envelope"></i>
+    </div>
+    <span class="bn-label">Contact</span>
+  </a>
+</nav>
+
+<div class="bn-spacer"></div>
+    <script src="test.js"></script>
+    <script type="module" src="js/visitors.js"></script>
+  </body>
+</html>

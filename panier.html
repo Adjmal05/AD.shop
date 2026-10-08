@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panier — AD.Shop</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="panier.css" />
+  </head>
+  <body>
+    <!-- ══════════════ NAVBAR (identique au site) ══════════════ -->
+    <header class="parie1">
+      <nav class="navbar">
+        <div class="burger" id="burger">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="logo-be">
+          <img src="./picture/logo 2.png" alt="AD Shop" />
+        </div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Acceuil</a></li>
+          <li><a href="produit.html">Nos Produit</a></li>
+          <li>
+            <a href="panier.html"
+              >Le Panier <i class="fa-solid fa-cart-shopping"></i
+              ><span class="cart-counter">0</span
+            ></a>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-search" id="nav-search">
+          <!-- Barre qui s'ouvre au clic (desktop) -->
+          <div class="nav-search-box" id="nav-search-box">
+            <input
+              type="text"
+              id="nav-search-input"
+              placeholder="Rechercher un produit..."
+            />
+            <button onclick="lancerRecherche()">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+          <!-- Icône loupe -->
+          <button
+            class="nav-search-icon"
+            id="nav-search-icon"
+            onclick="toggleSearch()"
+          >
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+      </nav>
+      <div class="dropdown-menu" id="dropdown-menu">
+        <ul>
+          <li><a href="index.html">Acceuil</a></li>
+          <li><a href="produit.html">Nos Produit</a></li>
+          <li>
+            <a href="panier.html"
+              >Le Panier <i class="fa-solid fa-cart-shopping"></i
+              ><span class="cart-counter">0</span
+            ></a>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- ══════════════ BANNIÈRE PANIER ══════════════ -->
+    <section class="panier-banner">
+      <div class="banner-content">
+        <div class="banner-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+        <div>
+          <h1>Mon Panier</h1>
+          <p>Vérifiez vos articles avant de commander</p>
+        </div>
+      </div>
+      <div class="banner-badge" id="bannerCount">0 article(s)</div>
+    </section>
+
+    <!-- ══════════════ CONTENU PRINCIPAL ══════════════ -->
+    <main class="panier-main">
+      <!-- ── Colonne gauche : liste des articles ── -->
+      <section class="panier-liste" id="panierListe">
+        <!-- État vide (visible si panier vide) -->
+        <div class="panier-vide" id="panierVide">
+          <div class="vide-icon"><i class="fa-solid fa-bag-shopping"></i></div>
+          <h2>Votre panier est vide</h2>
+          <p>Découvrez nos produits et ajoutez vos favoris !</p>
+          <a href="produit.html" class="btn-continuer">
+            <i class="fa-solid fa-arrow-left"></i> Voir les produits
+          </a>
+        </div>
+
+        <!-- Liste dynamique des articles -->
+        <div id="cartItems"></div>
+
+        <!-- Bouton vider le panier -->
+        <button
+          class="btn-vider"
+          id="btnVider"
+          style="display: none"
+          onclick="viderPanier()"
+        >
+          <i class="fa-solid fa-trash"></i> Vider le panier
+        </button>
+      </section>
+
+      <!-- ── Colonne droite : récapitulatif ── -->
+      <aside class="panier-recap" id="panierRecap">
+        <h2 class="recap-titre">
+          <i class="fa-solid fa-receipt"></i> Récapitulatif
+        </h2>
+
+        <div class="recap-ligne">
+          <span>Sous-total</span>
+          <span id="sousTotal">0 Fc</span>
+        </div>
+        <div class="recap-ligne">
+          <span>Livraison</span>
+          <span class="livraison-gratuite"
+            ><i class="fa-solid fa-truck"></i> Gratuite</span
+          >
+        </div>
+        <div class="recap-ligne recap-tva">
+          <span>TVA (0%)</span>
+          <span>0 Fc</span>
+        </div>
+        <div class="recap-ligne recap-frais">
+          <span>Frais de transfert MVola</span>
+          <span id="fraisMvola">0 Fc</span>
+        </div>
+        <div class="recap-frais-note" id="fraisMvolaNote"></div>
+
+        <div class="recap-separateur"></div>
+
+        <div class="recap-total">
+          <span>Total</span>
+          <span id="totalFinal">0 Fc</span>
+        </div>
+
+        <div class="recap-euro" id="totalEuro">≈ 0 €</div>
+
+        <div class="promo-msg" id="promoMsg"></div>
+
+        <div class="recap-alerte" id="alerteHorsGrille" style="display:none">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          Montant supérieur à 1 000 000 Fc : frais de transfert non tarifés au-delà de ce seuil. Contactez-nous pour finaliser la commande.
+        </div>
+
+        <!-- CTA Commander -->
+        <button class="btn-commander" id="btnCommander" onclick="commander()">
+          <i class="fa-solid fa-bolt"></i> Commander maintenant
+        </button>
+
+        <a href="produit.html" class="btn-continuer-shopping">
+          <i class="fa-solid fa-arrow-left"></i> Continuer les achats
+        </a>
+
+        <!-- Garanties -->
+        <div class="garanties">
+          <div class="garantie-item">
+            <i class="fa-solid fa-shield-halved"></i
+            ><span>Paiement sécurisé</span>
+          </div>
+          <div class="garantie-item">
+            <i class="fa-solid fa-rotate-left"></i><span>Retour 7 jours</span>
+          </div>
+          <div class="garantie-item">
+            <i class="fa-solid fa-headset"></i><span>Support 24/7</span>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <!-- ══════════════ TOAST ══════════════ -->
+    <div class="toast" id="toast"></div>
+
+    <footer class="terminus">
+      <div class="ter1">
+        <h3>On Vous Presente</h3>
+        <img src="./picture/logo 2.png" alt="" />
+        <p>Des produits de bonne qualité</p>
+        <p>et des livraisons trés rapides</p>
+        <div class="livre"><p>🚛: Livraison partout aux comores</p></div>
+      </div>
+      <div class="ter2">
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="index.html">Acceuil</a></li>
+          <li><a href="produit.html">Nos Produit</a></li>
+          <li><a href="panier.html">Le Panier <i class="fa-solid fa-cart-shopping"></i><span class="cart-counter">0</span></a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div>📞: 034 20 707 87</div>
+      </div>
+      <div class="ter3">
+        <h3>Nous contacter rapidement</h3>
+        <p>whatsapp:+261 034 20 707 87</p>
+        <p>whatsapp busness:+261 037 89 307 10</p>
+        <p>whatsapp manager :+269 473 24 50</p>
+        <P>facebook: Adjmal Dhinnoune</p>
+          <div class="mail">drimsofficiel7@gmail.com</div>
+      </div>
+      <div class="ter4">
+        <h3>Vous pouvez</h3>
+        <p>-Commander se qu'on ne vend pas.</p>
+        <p>-Envoyer des photos de produit.</p>
+        <p>-Avoir des Bonus si vous etes fidéle a nous.</p>
+        <p>-Avoir des Cadeaux selon la quantité de </p>
+        <p>produit Commandé.</p>
+        <div class="boom"><a href="produit.html">Commander</a></div>
+      </div>
+    </footer>
+
+    <nav class="bottom-nav" id="bottomNav">
+      <a href="index.html" class="bottom-nav-item" id="bn-accueil">
+        <div class="bn-icon-wrap">
+          <i class="fa-solid fa-house"></i>
+        </div>
+        <span class="bn-label">Accueil</span>
+      </a>
+
+      <a href="produit.html" class="bottom-nav-item" id="bn-produit">
+        <div class="bn-icon-wrap">
+          <i class="fa-solid fa-shirt"></i>
+        </div>
+        <span class="bn-label">Produits</span>
+      </a>
+
+      <a href="panier.html" class="bottom-nav-item" id="bn-panier">
+        <div class="bn-icon-wrap">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="bn-badge" id="bn-cart-count" style="display: none"
+            >0</span
+          >
+        </div>
+        <span class="bn-label">Panier</span>
+      </a>
+
+      <a href="contact.html" class="bottom-nav-item" id="bn-contact">
+        <div class="bn-icon-wrap">
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+        <span class="bn-label">Contact</span>
+      </a>
+    </nav>
+
+    <div class="bn-spacer"></div>
+
+    <script src="panier.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

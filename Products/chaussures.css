@@ -1,0 +1,158 @@
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* ── GRILLE ── */
+.products-wrapper {
+  background-color: #f0f2f8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 30px 40px;
+  justify-content: center;
+  max-width: 1500px;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+/* ── CARTE PRODUIT (structure identique au site existant) ── */
+.one2 {
+  min-width: 200px;
+  flex-shrink: 0;
+  background-color: rgb(234, 234, 249);
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+  overflow: hidden;
+  /* petite ombre pour mieux ressortir sur le fond */
+  box-shadow: 0 3px 12px rgba(26, 111, 196, 0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.one2:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 28px rgba(26, 111, 196, 0.2);
+}
+
+.one2 img {
+  width: 200px;
+  height: 170px;
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.one2 img:hover {
+  transform: scale(1.1);
+}
+
+.one2-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding-bottom: 2px;
+}
+
+.one2 h2:first-of-type {
+  font-size: 16px;
+  text-decoration: underline;
+  color: black;
+}
+
+.one2 h2:last-of-type {
+  font-size: 16px;
+  color: rgb(11, 94, 11);
+}
+
+/* Les deux selects côte à côte */
+.one2-selects {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.select-style {
+  flex: 1;
+  padding: 4px 2px;
+  border: 1.5px solid #b0b0d0;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #333;
+  background: #fff;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.select-style:hover,
+.select-style:focus {
+  border-color: #2A8CFF;
+}
+
+.one2 a {
+  width: 180px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  background-color: #D62828;
+  border-radius: 25px;
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.one2 a:hover {
+  background-color: green;
+  transition: 0.3s ease;
+}
+
+/* ── TOAST ── */
+.toast {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  background: #111827;
+  color: #fff;
+  padding: 13px 22px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.28);
+  z-index: 9999;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  pointer-events: none;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+  .page-banner { padding: 20px; }
+  .filters-bar { padding: 12px 16px; }
+  .products-wrapper { padding: 16px; gap: 14px; }
+  .one2 { min-width: 160px; }
+  .one2 img { width: 160px; height: 136px; }
+  .one2 a { width: 140px; }
+}
