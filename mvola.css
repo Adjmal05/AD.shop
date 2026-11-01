@@ -70,6 +70,11 @@ body { background: var(--bg); font-family: var(--font); color: var(--text); }
   display:flex; align-items:center; justify-content:center;
   border:2px solid rgba(255,255,255,0.3);
 }
+.mv-logo-icon img{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
 .mv-header-card h2 { color:white; font-size:22px; font-weight:700; }
 .mv-header-card p  { color:rgba(255,255,255,0.8); font-size:13px; }
 .mv-total-badge {
@@ -109,7 +114,7 @@ body { background: var(--bg); font-family: var(--font); color: var(--text); }
   background:#f0fdf4; border:2px solid #bbf7d0;
   border-radius:12px; padding:12px 16px;
 }
-.mv-numero-box i  { color:var(--vert); font-size:18px; }
+.mv-numero-box i  { color:var(--vert-dark); font-size:18px; }
 .mv-numero-box span { font-size:22px; font-weight:800; color:var(--vert-dark); letter-spacing:1px; flex:1; }
 .mv-copy-btn {
   background:var(--vert); color:white; border:none; border-radius:8px;

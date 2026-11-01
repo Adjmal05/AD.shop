@@ -1,3 +1,5 @@
+lien git :  https://adjmal05.github.io/AD.shop/
+
 -par exemple un t-shirt de avoir des numero (S L M Xl XXl) et pour sa on vas un ptit truc qui descend et on choisi 
                ---------
 - les chaussures aussi auront besoin de crocher les pointures donc on fait la meme chose avec le t-shirt
